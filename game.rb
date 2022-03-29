@@ -11,14 +11,9 @@ class Game
       @choice = ''
       if @intro.input == 2
         play('B')
-        # @breaker = Breaker.new
-        # @choice = @breaker
       else
         play('M')
-        # @maker = Maker.new
-        # @choice = @maker
       end
-      # play(@choice)
     end
   
     def play_again(win)
@@ -52,8 +47,7 @@ class Game
       round = 1
       win = false
   
-      if choice == 'B' # @breaker
-        # @breaker.start
+      if choice == 'B'
         guess = 0
         reset_clues
         secret_code = Array.new(4) { rand(1..6) }
@@ -62,8 +56,7 @@ class Game
         puts "If you guess the right number and position, the computer will show 'X'\n\n"
         puts "If you guess the right number but not position, the computer will show 'O'\n\n"
         puts "You have 12 rounds to crack the code.\n\nGood Luck!\n\n---------------------"
-      elsif choice == 'M' # @maker
-        # @maker.start
+      elsif choice == 'M'
         guess = [1, 1, 1, 1]
         secret_code = 0
         until secret_code.size == 4 && secret_code.all? { |x| [1, 2, 3, 4, 5, 6].include?(x) }
@@ -80,8 +73,7 @@ class Game
         exs = ''
               ohs = ''
               
-              if choice == 'B' # @breaker
-          # @breaker.get_guess
+              if choice == 'B'
           clues = ''
           guess = 0
           until guess.size == 4 && guess.all? { |x| [1, 2, 3, 4, 5, 6].include?(x)	}
@@ -89,8 +81,7 @@ class Game
             guess = gets.chomp.split('').map(&:to_i)
             guess
           end
-        elsif choice == 'M' # @maker
-                  # @maker.get_guess
+        elsif choice == 'M'
                   c_length = prev_clues.length
           if round > 1 && c_length != 4
             
@@ -100,7 +91,6 @@ class Game
             p guess = new_guess
           end
           if c_length == 4
-            # p list = guess.combination(4).to_a
             new_guess = guess.shuffle
             p guess = new_guess
           end
