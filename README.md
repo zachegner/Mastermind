@@ -1,5 +1,6 @@
 # Mastermind
-A Mastermind game designed by Zach Egner
+##### A game based off of Mastermind created by Zach Egner
+###### Written in Ruby
 
 ## How To Play
  Select *Maker* or *Breaker*.
@@ -11,5 +12,5 @@ A Mastermind game designed by Zach Egner
   If you guess the right number but not position, the computer will show 'O'.  
   You have 12 rounds to crack the code.
 
-## Langages
-  - Ruby
+## Live Preview
+https://replit.com/@Kongman551/Mastermind#main.rb
